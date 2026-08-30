@@ -2,239 +2,73 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>BateriaPro | Curso de Bateria Online</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BateriaPro | Área do Aluno</title>
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Segoe UI',Arial,sans-serif;background:#0a0a0a;color:#fff}
-a{text-decoration:none}
-.wrap{max-width:1100px;width:92%;margin:auto}
-
-/* HEADER */
-header{padding:18px 0;border-bottom:1px solid #1e1e1e;background:#0a0a0a;position:sticky;top:0;z-index:100}
-.nav{display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:24px;font-weight:900;letter-spacing:-1px;color:#fff}
-.logo span{color:#e63946}
-.btn{display:inline-block;background:#e63946;color:#fff;padding:13px 24px;border-radius:8px;font-weight:700;font-size:14px;transition:.2s}
-.btn:hover{background:#c1121f}
-.btn-outline{background:transparent;border:2px solid #e63946;color:#e63946}
-.btn-outline:hover{background:#e63946;color:#fff}
-
-/* HERO */
-.hero{padding:90px 0 70px;background:radial-gradient(ellipse at 70% 0%,#2a0a0e,transparent 60%)}
-.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:50px;align-items:center}
-.tag{display:inline-block;color:#e63946;border:1px solid #4a1018;background:#1a0608;padding:7px 14px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:20px}
-h1{font-size:clamp(38px,5.5vw,62px);line-height:1.05;font-weight:900;margin-bottom:18px}
-h1 em{font-style:normal;color:#e63946}
-.hero p{color:#9a9a9a;font-size:17px;line-height:1.7;margin-bottom:30px}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
-.hero-visual{background:#111;border:1px solid #222;border-radius:20px;padding:30px;text-align:center}
-.drum-emoji{font-size:100px;display:block;margin-bottom:16px;animation:bounce 2s ease-in-out infinite}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.hero-visual p{color:#666;font-size:14px}
-.hero-badges{display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap}
-.badge{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:20px;padding:6px 14px;font-size:12px;color:#aaa}
-
-/* STATS */
-.stats{padding:50px 0;border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
-.stat-num{font-size:36px;font-weight:900;color:#e63946}
-.stat-label{color:#666;font-size:13px;margin-top:4px}
-
-/* MÓDULOS */
-.modulos{padding:80px 0}
-.section-title{text-align:center;margin-bottom:50px}
-.section-title h2{font-size:36px;font-weight:900;margin-bottom:10px}
-.section-title p{color:#777;font-size:16px}
-.modulos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.modulo{background:#111;border:1px solid #1e1e1e;border-radius:14px;padding:24px;display:flex;gap:18px;align-items:flex-start;transition:.2s}
-.modulo:hover{border-color:#e63946;transform:translateY(-2px)}
-.mod-num{background:#e63946;color:#fff;font-size:13px;font-weight:900;width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.mod-title{font-size:16px;font-weight:700;margin-bottom:6px}
-.mod-desc{color:#777;font-size:14px;line-height:1.6}
-
-/* PLANOS */
-.planos{padding:80px 0;background:#060606}
-.planos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.plano{background:#111;border:1px solid #1e1e1e;border-radius:16px;padding:28px}
-.plano.featured{border-color:#e63946;position:relative}
-.plano-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:#e63946;color:#fff;font-size:11px;font-weight:700;padding:4px 16px;border-radius:20px;white-space:nowrap}
-.plano h3{font-size:18px;font-weight:800;margin-bottom:6px}
-.plano-price{font-size:42px;font-weight:900;margin:14px 0;color:#e63946}
-.plano-price span{font-size:16px;color:#666;font-weight:400}
-.plano ul{list-style:none;margin-bottom:22px}
-.plano li{padding:9px 0;border-bottom:1px solid #1a1a1a;color:#aaa;font-size:14px}
-.plano li:before{content:"✓ ";color:#e63946;font-weight:700}
-.plano .btn{width:100%;text-align:center;display:block}
-
-/* FAQ */
-.faq{padding:80px 0}
-details{background:#111;border:1px solid #1e1e1e;border-radius:12px;padding:18px;margin:10px auto;max-width:800px}
-details[open]{border-color:#e63946}
-summary{font-weight:700;cursor:pointer;font-size:15px}
-details p{color:#888;font-size:14px;margin-top:10px;line-height:1.7}
-
-/* FOOTER */
-footer{text-align:center;padding:35px;border-top:1px solid #1a1a1a;color:#555;font-size:13px}
-
-/* WPP BTN */
-#wpp-float{display:none;position:fixed;bottom:28px;right:22px;z-index:9999}
-#wpp-float a{display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-size:14px;font-weight:700;padding:14px 20px;border-radius:50px;box-shadow:0 4px 22px rgba(37,211,102,.5);text-decoration:none;white-space:nowrap;animation:wpp-pulse 2.2s ease-in-out infinite}
-#wpp-float a:hover{background:#1ebe5d}
-@keyframes wpp-pulse{0%,100%{transform:scale(1);box-shadow:0 4px 22px rgba(37,211,102,.5)}50%{transform:scale(1.05);box-shadow:0 6px 30px rgba(37,211,102,.75)}}
-@keyframes wpp-in{from{opacity:0;transform:translateY(20px) scale(.85)}to{opacity:1;transform:translateY(0) scale(1)}}
-
-@media(max-width:768px){
-.hero-grid,.modulos-grid,.planos-grid,.stats-grid{grid-template-columns:1fr}
-.stats-grid{grid-template-columns:repeat(2,1fr)}
+:root{
+  --red:#e63946;
+  --dark:#080808;
+  --sidebar:#101010;
+  --card:#151515;
+  --card2:#1d1d1d;
+  --border:#303030;
+  --text:#fff;
+  --muted:#a0a0a0;
+  --green:#22c55e;
 }
-</style>
-</head>
-<body>
 
-<header>
-<div class="wrap nav">
-  <a class="logo" href="#">Bateria<span>Pro</span></a>
-  <a class="btn" href="#planos">Quero aprender →</a>
-</div>
-</header>
-
-<section class="hero">
-<div class="wrap hero-grid">
-  <div>
-    <span class="tag">🥁 CURSO 100% ONLINE</span>
-    <h1>Do zero ao seu <em>primeiro ritmo</em> em semanas.</h1>
-    <p>Aprenda bateria do jeito certo: técnica, coordenação e ritmo — com aulas em vídeo direto ao ponto, sem enrolação.</p>
-    <div class="hero-btns">
-      <a class="btn" href="#planos">Começar agora</a>
-      <a class="btn btn-outline" href="#modulos">Ver conteúdo</a>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <span class="drum-emoji">🥁</span>
-    <p>Curso completo de bateria para iniciantes</p>
-    <div class="hero-badges">
-      <span class="badge">🎬 Vídeo aulas</span>
-      <span class="badge">📱 Em qualquer device</span>
-      <span class="badge">⏱️ No seu ritmo</span>
-    </div>
-  </div>
-</div>
-</section>
-
-<section class="stats">
-<div class="wrap stats-grid">
-  <div><div class="stat-num">6</div><div class="stat-label">Módulos completos</div></div>
-  <div><div class="stat-num">30+</div><div class="stat-label">Aulas em vídeo</div></div>
-  <div><div class="stat-num">100%</div><div class="stat-label">Para iniciantes</div></div>
-  <div><div class="stat-num">∞</div><div class="stat-label">Acesso vitalício</div></div>
-</div>
-</section>
-
-<section class="modulos" id="modulos">
-<div class="wrap">
-  <div class="section-title">
-    <h2>O que você vai aprender</h2>
-    <p>6 módulos do zero ao avançado, na ordem certa.</p>
-  </div>
-  <div class="modulos-grid">
-    <div class="modulo"><div class="mod-num">01</div><div><div class="mod-title">Conhecendo a Bateria</div><div class="mod-desc">Partes do kit, como afinar, baquetas e postura correta.</div></div></div>
-    <div class="modulo"><div class="mod-num">02</div><div><div class="mod-title">Primeiros Ritmos</div><div class="mod-desc">Leitura rítmica básica, pulso, tempo e metrônomo.</div></div></div>
-    <div class="modulo"><div class="mod-num">03</div><div><div class="mod-title">Coordenação</div><div class="mod-desc">Independência de membros: mãos, bumbo e chimbal juntos.</div></div></div>
-    <div class="modulo"><div class="mod-num">04</div><div><div class="mod-title">Ritmos Populares</div><div class="mod-desc">Rock, Samba, Funk, Reggae e Pop — os estilos mais tocados.</div></div></div>
-    <div class="modulo"><div class="mod-num">05</div><div><div class="mod-title">Técnica Avançada</div><div class="mod-desc">Rudimentos, dinâmica e como ganhar velocidade com metrônomo.</div></div></div>
-    <div class="modulo"><div class="mod-num">06</div><div><div class="mod-title">Sua Primeira Performance</div><div class="mod-desc">Tocar junto com músicas reais e dicas para continuar evoluindo.</div></div></div>
-  </div>
-</div>
-</section>
-
-<section class="planos" id="planos">
-<div class="wrap">
-  <div class="section-title">
-    <h2>Escolha seu plano</h2>
-    <p>Acesso imediato após o pagamento.</p>
-  </div>
-  <div class="planos-grid">
-
-    <div class="plano">
-      <h3>Básico</h3>
-      <div class="plano-price">R$ 57<span>/único</span></div>
-      <ul>
-        <li>Módulos 1 e 2</li>
-        <li>Aulas introdutórias</li>
-        <li>Material de apoio PDF</li>
-        <li>Acesso online</li>
-      </ul>
-      <a class="btn btn-outline" href="https://mpago.la/1vSB4zQ" target="_blank" rel="noopener" onclick="showWpp()">Comprar</a>
-    </div>
-
-    <div class="plano featured">
-      <div class="plano-badge">⭐ MAIS POPULAR</div>
-      <h3>Profissional</h3>
-      <div class="plano-price">R$ 79<span>/único</span></div>
-      <ul>
-        <li>Todos os 6 módulos</li>
-        <li>30+ aulas em vídeo</li>
-        <li>Ritmos populares</li>
-        <li>Material PDF completo</li>
-        <li>Acesso vitalício</li>
-      </ul>
-      <a class="btn" href="https://mpago.la/34gKqET" target="_blank" rel="noopener" onclick="showWpp()">Comprar</a>
-    </div>
-
-    <div class="plano">
-      <h3>Completo</h3>
-      <div class="plano-price">R$ 97<span>/único</span></div>
-      <ul>
-        <li>Tudo do Profissional</li>
-        <li>Aulas bônus avançadas</li>
-        <li>Exercícios extras</li>
-        <li>Suporte pelo WhatsApp</li>
-        <li>Acesso vitalício</li>
-      </ul>
-      <a class="btn btn-outline" href="https://mpago.la/1Njp5iM" target="_blank" rel="noopener" onclick="showWpp()">Comprar</a>
-    </div>
-
-  </div>
-</div>
-</section>
-
-<section class="faq">
-<div class="wrap">
-  <div class="section-title">
-    <h2>Perguntas frequentes</h2>
-  </div>
-  <details><summary>Preciso ter bateria em casa?</summary><p>Não é obrigatório. Você pode começar praticando em almofadas de prática ou pad de estudo. Mas ter um kit (mesmo eletrônico) ajuda muito na evolução.</p></details>
-  <details><summary>Preciso ter experiência musical?</summary><p>Não. O curso começa do absoluto zero. Você não precisa saber ler música nem ter tocado nenhum instrumento antes.</p></details>
-  <details><summary>Como recebo o acesso?</summary><p>Após o pagamento, entre em contato pelo WhatsApp com o comprovante e você receberá o acesso manualmente em até poucas horas.</p></details>
-  <details><summary>Posso acessar pelo celular?</summary><p>Sim. As aulas funcionam em qualquer dispositivo com internet.</p></details>
-</div>
-</section>
-
-<footer>
-© 2026 BateriaPro — Curso de Bateria Online
-</footer>
-
-<!-- Botão WhatsApp flutuante -->
-<div id="wpp-float">
-  <a href="https://wa.me/5561993730064?text=Ol%C3%A1%21+Acabei+de+comprar+o+BateriaPro+e+gostaria+de+receber+o+acesso.+%F0%9F%A5%81" target="_blank" rel="noopener">
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white" style="flex-shrink:0">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-      <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.306A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.955 7.955 0 01-4.076-1.12l-.29-.173-3.018.791.806-2.944-.19-.302A7.955 7.955 0 014 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z"/>
-    </svg>
-    Recebi o comprovante — quero meu acesso
-  </a>
-</div>
-
-<script>
-function showWpp(){
-  setTimeout(function(){
-    var b=document.getElementById('wpp-float');
-    b.style.display='block';
-    b.style.animation='wpp-in .4s cubic-bezier(.175,.885,.32,1.275) both';
-  },3000);
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
-</script>
 
-</body>
-</html>
+html{scroll-behavior:smooth}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--dark);
+  color:var(--text);
+}
+
+button{
+  font-family:inherit;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:300px;
+  height:100vh;
+  overflow-y:auto;
+  background:var(--sidebar);
+  border-right:1px solid var(--border);
+  padding:22px;
+}
+
+.logo{
+  font-size:30px;
+  font-weight:900;
+  margin-bottom:25px;
+}
+
+.logo span{color:var(--red)}
+
+.course-box{
+  padding:17px;
+  border-radius:15px;
+  background:linear-gradient(135deg,#251214,#151515);
+  border:1px solid #51252a;
+  margin-bottom:20px;
+}
+
+.course-box p{
+  color:var(--muted);
+  font-size:13px;
+  margin-top:6px;
+}
