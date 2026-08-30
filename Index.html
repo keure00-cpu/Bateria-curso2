@@ -57,4 +57,1210 @@
       margin-bottom:20px;
     }
 
-    .logo span
+    .logo span{
+      color:var(--red);
+    }
+
+    .course-box{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:15px;
+      padding:16px;
+      margin-bottom:20px;
+    }
+
+    .course-box p{
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.5;
+    }
+
+    .progress-text{
+      display:flex;
+      justify-content:space-between;
+      font-size:13px;
+      margin-bottom:8px;
+    }
+
+    .progress-text strong{
+      color:var(--red);
+    }
+
+    .progress{
+      height:10px;
+      background:#292929;
+      border-radius:20px;
+      overflow:hidden;
+      margin-bottom:20px;
+    }
+
+    #progressFill{
+      height:100%;
+      width:0%;
+      background:var(--red);
+      transition:0.3s;
+    }
+
+    .menu-title{
+      color:#777;
+      font-size:11px;
+      letter-spacing:1px;
+      margin:15px 0 10px;
+    }
+
+    .module-button{
+      width:100%;
+      text-align:left;
+      background:#1b1b1b;
+      color:white;
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:12px;
+      margin-bottom:8px;
+      cursor:pointer;
+    }
+
+    .module-button.active{
+      border-color:var(--red);
+      background:#281315;
+    }
+
+    .module-button small{
+      display:block;
+      color:#999;
+      margin-top:4px;
+    }
+
+    /* CONTEÚDO */
+
+    .main{
+      margin-left:290px;
+      padding:30px;
+      max-width:1300px;
+    }
+
+    .top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      margin-bottom:25px;
+    }
+
+    .top small{
+      color:var(--red);
+      font-weight:bold;
+    }
+
+    .top h1{
+      margin:5px 0;
+    }
+
+    .counter{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:12px;
+      color:#bbb;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 300px;
+      gap:20px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:18px;
+    }
+
+    .banner{
+      padding:30px;
+      background:linear-gradient(135deg,#381417,#171717);
+      border-radius:18px 18px 0 0;
+    }
+
+    .drum{
+      font-size:48px;
+    }
+
+    .tag{
+      color:#ff7780;
+      font-weight:bold;
+      font-size:12px;
+      margin-top:12px;
+    }
+
+    .banner h2{
+      font-size:30px;
+      margin:8px 0;
+    }
+
+    .banner p{
+      color:#bbb;
+      line-height:1.6;
+    }
+
+    .content{
+      padding:28px;
+    }
+
+    .section{
+      margin-bottom:25px;
+    }
+
+    .section h3{
+      margin-bottom:10px;
+    }
+
+    .section p,
+    .section li{
+      color:#bbb;
+      line-height:1.7;
+    }
+
+    .section ul{
+      padding-left:22px;
+    }
+
+    .exercise{
+      background:#211012;
+      border:1px solid #51252a;
+      border-radius:12px;
+      padding:18px;
+      margin-bottom:20px;
+    }
+
+    .tip{
+      background:#1c1c1c;
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:18px;
+    }
+
+    .actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:25px;
+    }
+
+    .btn{
+      border:0;
+      padding:13px 18px;
+      border-radius:10px;
+      color:white;
+      cursor:pointer;
+      font-weight:bold;
+    }
+
+    .primary{
+      background:var(--red);
+    }
+
+    .secondary{
+      background:#292929;
+    }
+
+    /* LADO DIREITO */
+
+    .side-card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:15px;
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .stat{
+      background:#202020;
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:15px;
+      margin-top:10px;
+    }
+
+    .number{
+      font-size:28px;
+      font-weight:bold;
+      color:var(--red);
+    }
+
+    .stat p{
+      color:#999;
+      margin:4px 0 0;
+      font-size:13px;
+    }
+
+    .lesson-button{
+      width:100%;
+      background:#202020;
+      color:white;
+      border:1px solid var(--border);
+      padding:11px;
+      border-radius:9px;
+      margin-top:7px;
+      text-align:left;
+      cursor:pointer;
+    }
+
+    .lesson-button.active{
+      border-color:var(--red);
+      background:#281315;
+    }
+
+    .lesson-button.done{
+      border-color:var(--green);
+    }
+
+    .lesson-button small{
+      display:block;
+      color:#999;
+      margin-top:3px;
+    }
+
+    @media(max-width:950px){
+
+      .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+      }
+
+      .main{
+        margin-left:0;
+        padding:18px;
+      }
+
+      .grid{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+    @media(max-width:600px){
+
+      .top{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .actions{
+        flex-direction:column;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .banner,
+      .content{
+        padding:20px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <aside class="sidebar">
+
+    <div class="logo">
+      Bateria<span>Pro</span>
+    </div>
+
+    <div class="course-box">
+      <strong>🥁 Área do Aluno</strong>
+      <p>Curso completo com 35 aulas escritas de bateria.</p>
+    </div>
+
+    <div class="progress-text">
+      <span>Seu progresso</span>
+      <strong id="progressPercent">0%</strong>
+    </div>
+
+    <div class="progress">
+      <div id="progressFill"></div>
+    </div>
+
+    <div class="menu-title">
+      MÓDULOS DO CURSO
+    </div>
+
+    <div id="moduleList"></div>
+
+  </aside>
+
+
+  <main class="main">
+
+    <div class="top">
+
+      <div>
+        <small>ÁREA DE ESTUDOS</small>
+        <h1 id="moduleTitle"></h1>
+      </div>
+
+      <div class="counter" id="counter"></div>
+
+    </div>
+
+
+    <div class="grid">
+
+      <section class="card">
+
+        <div class="banner">
+
+          <div class="drum">🥁</div>
+
+          <div class="tag" id="lessonTag"></div>
+
+          <h2 id="lessonTitle"></h2>
+
+          <p id="lessonSummary"></p>
+
+        </div>
+
+
+        <div class="content">
+
+          <div class="section">
+
+            <h3>📖 Conteúdo da Aula</h3>
+
+            <p id="lessonContent"></p>
+
+          </div>
+
+
+          <div class="section">
+
+            <h3>🎯 Pontos importantes</h3>
+
+            <ul id="lessonPoints"></ul>
+
+          </div>
+
+
+          <div class="exercise">
+
+            <h3>🥁 Exercício prático</h3>
+
+            <p id="lessonExercise"></p>
+
+          </div>
+
+
+          <div class="tip">
+
+            <h3>💡 Dica</h3>
+
+            <p id="lessonTip"></p>
+
+          </div>
+
+
+          <div class="actions">
+
+            <button class="btn primary" onclick="completeLesson()">
+              ✓ Concluir Aula
+            </button>
+
+            <button class="btn secondary" onclick="previousLesson()">
+              ← Anterior
+            </button>
+
+            <button class="btn secondary" onclick="nextLesson()">
+              Próxima →
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <aside>
+
+        <div class="side-card">
+
+          <h3>🏆 Progresso</h3>
+
+          <div class="stat">
+
+            <div class="number" id="completedNumber">0</div>
+
+            <p>Aulas concluídas</p>
+
+          </div>
+
+          <div class="stat">
+
+            <div class="number" id="remainingNumber">35</div>
+
+            <p>Aulas restantes</p>
+
+          </div>
+
+        </div>
+
+
+        <div class="side-card">
+
+          <h3 id="lessonListTitle">
+            📚 Aulas
+          </h3>
+
+          <div id="lessonList"></div>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+
+<script>
+
+/* ==========================================
+   BATARIAPRO - 35 AULAS
+========================================== */
+
+const course = [
+
+{
+name:"Conhecendo a Bateria",
+
+lessons:[
+
+{
+title:"Bem-vindo ao BateriaPro",
+summary:"Conheça o funcionamento do curso e como organizar seus estudos.",
+content:"A evolução na bateria acontece através da prática regular. Estude uma aula por vez, pratique os exercícios e avance gradualmente. Não é necessário ter pressa: o objetivo é construir uma base sólida.",
+points:["Estude regularmente","Comece devagar","Repita os exercícios","Pratique com atenção"],
+exercise:"Organize um horário semanal para estudar bateria.",
+tip:"Praticar um pouco todos os dias pode ser melhor do que estudar apenas uma vez por semana."
+},
+
+{
+title:"Conhecendo a bateria",
+summary:"Aprenda quais são as principais partes da bateria.",
+content:"Uma bateria é formada por tambores, pratos e pedais. Cada peça possui uma função e produz um som diferente.",
+points:["Caixa","Bumbo","Tons","Chimbal","Pratos"],
+exercise:"Observe uma bateria e tente identificar cada peça.",
+tip:"Conhecer os nomes das peças facilita o entendimento das aulas."
+},
+
+{
+title:"Pratos e tambores",
+summary:"Entenda a diferença entre os elementos do instrumento.",
+content:"Os tambores produzem sons de diferentes alturas. Os pratos adicionam brilho e textura ao ritmo.",
+points:["Sons graves","Sons médios","Sons agudos","Texturas"],
+exercise:"Ouça uma música e tente identificar tambores e pratos.",
+tip:"A escuta musical também faz parte do aprendizado."
+},
+
+{
+title:"Tipos de baquetas",
+summary:"Conheça diferentes modelos de baquetas.",
+content:"As baquetas possuem tamanhos e pesos diferentes. A escolha pode variar conforme o estilo musical e o conforto do músico.",
+points:["Peso","Tamanho","Equilíbrio","Conforto"],
+exercise:"Segure uma baqueta e observe seu equilíbrio.",
+tip:"Evite apertar demais a baqueta."
+},
+
+{
+title:"Postura",
+summary:"Aprenda uma posição confortável para tocar.",
+content:"Uma boa postura facilita os movimentos e ajuda a reduzir tensão durante a prática.",
+points:["Banco ajustado","Braços relaxados","Equilíbrio","Movimentos naturais"],
+exercise:"Sente-se e verifique se consegue alcançar as peças confortavelmente.",
+tip:"Se sentir desconforto, revise sua posição."
+},
+
+{
+title:"Como segurar as baquetas",
+summary:"Desenvolva controle básico das mãos.",
+content:"Segure a baqueta de forma firme, porém relaxada. O objetivo é controlar os movimentos sem criar tensão excessiva.",
+points:["Relaxamento","Controle","Movimentos iguais","Precisão"],
+exercise:"Faça movimentos lentos alternando as mãos.",
+tip:"Controle deve vir antes da velocidade."
+}
+
+]
+},
+
+{
+name:"Primeiros Ritmos",
+
+lessons:[
+
+{
+title:"Pulso e tempo",
+summary:"Entenda a base da organização musical.",
+content:"O pulso é uma referência regular que mantém o ritmo organizado.",
+points:["Regularidade","Contagem","Escuta"],
+exercise:"Bata palmas mantendo um ritmo constante.",
+tip:"Evite acelerar."
+},
+
+{
+title:"Usando o metrônomo",
+summary:"Pratique com uma referência de tempo.",
+content:"O metrônomo produz pulsos regulares e ajuda a desenvolver precisão.",
+points:["Comece lento","Escute o pulso","Mantenha estabilidade"],
+exercise:"Acompanhe o metrônomo com palmas.",
+tip:"Aumente a velocidade apenas quando estiver confortável."
+},
+
+{
+title:"Contagem musical",
+summary:"Organize os tempos de um ritmo.",
+content:"Contar ajuda a saber em qual parte do padrão você está.",
+points:["Conte 1 a 4","Repita","Mantenha o pulso"],
+exercise:"Conte quatro tempos repetidamente.",
+tip:"No início, conte em voz alta."
+},
+
+{
+title:"Seu primeiro ritmo",
+summary:"Monte uma sequência simples.",
+content:"Comece utilizando uma sequência pequena e repetitiva para desenvolver estabilidade.",
+points:["Simplicidade","Pulso","Repetição"],
+exercise:"Repita um padrão simples várias vezes.",
+tip:"Corrija erros antes de acelerar."
+},
+
+{
+title:"Variação básica",
+summary:"Faça pequenas mudanças no ritmo.",
+content:"Uma variação pode alterar apenas uma parte do padrão.",
+points:["Mude pouco","Mantenha o tempo","Compare"],
+exercise:"Modifique apenas um golpe.",
+tip:"Mudar uma coisa por vez facilita o aprendizado."
+},
+
+{
+title:"Exercício completo",
+summary:"Revise os conceitos do módulo.",
+content:"Combine pulso, contagem e repetição durante sua prática.",
+points:["Pulso","Controle","Constância"],
+exercise:"Pratique por alguns minutos e avalie sua estabilidade.",
+tip:"Faça pequenas pausas."
+}
+
+]
+},
+
+{
+name:"Coordenação",
+
+lessons:[
+
+{
+title:"Coordenação das mãos",
+summary:"Desenvolva movimentos alternados.",
+content:"A coordenação melhora com exercícios simples repetidos com atenção.",
+points:["Devagar","Regularidade","Controle"],
+exercise:"Alterne direita e esquerda lentamente.",
+tip:"Busque igualdade entre as mãos."
+},
+
+{
+title:"Introdução ao bumbo",
+summary:"Aprenda a utilizar o pedal.",
+content:"O bumbo é tocado através do pedal e exige controle do pé.",
+points:["Equilíbrio","Controle","Regularidade"],
+exercise:"Faça batidas regulares no pedal.",
+tip:"Evite tensão."
+},
+
+{
+title:"Mãos e pé juntos",
+summary:"Combine diferentes movimentos.",
+content:"Comece combinando movimentos simples das mãos e do pé.",
+points:["Uma etapa por vez","Velocidade baixa","Repetição"],
+exercise:"Pratique uma sequência curta.",
+tip:"Diminua a velocidade se perder o controle."
+},
+
+{
+title:"Independência",
+summary:"Desenvolva controle entre os membros.",
+content:"Independência significa realizar movimentos diferentes ao mesmo tempo.",
+points:["Paciência","Repetição","Simplicidade"],
+exercise:"Mantenha um movimento constante e adicione outro.",
+tip:"Não tente exercícios avançados cedo demais."
+},
+
+{
+title:"Exercício de coordenação",
+summary:"Combine os fundamentos estudados.",
+content:"Utilize uma sequência simples e repita até os movimentos se tornarem naturais.",
+points:["Controle","Pulso","Equilíbrio"],
+exercise:"Pratique por alguns minutos.",
+tip:"Qualidade é mais importante que quantidade."
+}
+
+]
+},
+
+{
+name:"Ritmos Populares",
+
+lessons:[
+
+{
+title:"Ritmo de Rock",
+summary:"Conheça características básicas do rock.",
+content:"O rock geralmente utiliza uma estrutura clara e uma marcação forte.",
+points:["Pulso","Repetição","Controle"],
+exercise:"Ouça uma música de rock e marque o pulso.",
+tip:"Escute antes de tentar tocar."
+},
+
+{
+title:"Variações de Rock",
+summary:"Crie novas versões de uma base.",
+content:"Pequenas mudanças podem criar diferentes sensações.",
+points:["Mudanças pequenas","Tempo constante","Repetição"],
+exercise:"Crie duas versões simples.",
+tip:"Comece alterando apenas um elemento."
+},
+
+{
+title:"Ritmo Pop",
+summary:"Aprenda princípios de acompanhamento.",
+content:"No pop, a bateria normalmente acompanha a música com estabilidade.",
+points:["Simplicidade","Regularidade","Dinâmica"],
+exercise:"Observe mudanças de intensidade em uma música.",
+tip:"Nem sempre tocar mais é melhor."
+},
+
+{
+title:"Introdução ao Samba",
+summary:"Conheça fundamentos rítmicos do samba.",
+content:"A escuta ativa ajuda a perceber padrões característicos do estilo.",
+points:["Escuta","Pulso","Coordenação"],
+exercise:"Tente identificar padrões repetidos.",
+tip:"Conhecer o estilo exige prática."
+},
+
+{
+title:"Ritmo Funk",
+summary:"Trabalhe groove e precisão.",
+content:"O encaixe entre os elementos é importante para criar uma sensação consistente.",
+points:["Precisão","Pulso","Dinâmica"],
+exercise:"Mantenha uma sequência constante.",
+tip:"Pequenas diferenças podem alterar o groove."
+},
+
+{
+title:"Ritmo Reggae",
+summary:"Observe a importância dos espaços.",
+content:"O reggae possui uma sensação rítmica própria.",
+points:["Escuta","Espaço","Regularidade"],
+exercise:"Marque os tempos com palmas.",
+tip:"Observe também os silêncios."
+}
+
+]
+},
+
+{
+name:"Técnica",
+
+lessons:[
+
+{
+title:"Rudimentos",
+summary:"Conheça exercícios fundamentais.",
+content:"Rudimentos ajudam a desenvolver controle através da repetição.",
+points:["Controle","Repetição","Relaxamento"],
+exercise:"Alterne movimentos simples.",
+tip:"Evite tensão."
+},
+
+{
+title:"Single Stroke",
+summary:"Pratique golpes alternados.",
+content:"Alterne os golpes entre direita e esquerda.",
+points:["Direita","Esquerda","Pulso"],
+exercise:"Faça uma sequência lenta.",
+tip:"Observe se as mãos possuem intensidade parecida."
+},
+
+{
+title:"Double Stroke",
+summary:"Pratique dois golpes por mão.",
+content:"Controle dois golpes antes de trocar para a outra mão.",
+points:["Dois golpes","Troca","Controle"],
+exercise:"Pratique lentamente.",
+tip:"Não sacrifique qualidade por velocidade."
+},
+
+{
+title:"Dinâmica",
+summary:"Controle a intensidade dos sons.",
+content:"Você pode tocar suave ou forte de maneira controlada.",
+points:["Suave","Forte","Contraste"],
+exercise:"Alterne sons suaves e fortes.",
+tip:"Controle a diferença."
+},
+
+{
+title:"Velocidade",
+summary:"Aumente gradualmente.",
+content:"Velocidade é consequência de técnica e controle.",
+points:["Comece lento","Precisão","Relaxamento"],
+exercise:"Aumente a velocidade aos poucos.",
+tip:"Volte para uma velocidade menor se perder o controle."
+},
+
+{
+title:"Metrônomo avançado",
+summary:"Avalie sua precisão.",
+content:"Utilize diferentes velocidades para observar sua estabilidade.",
+points:["Precisão","Regularidade","Escuta"],
+exercise:"Pratique o mesmo exercício em três velocidades.",
+tip:"Anote onde você se sente mais confortável."
+}
+
+]
+},
+
+{
+name:"Performance",
+
+lessons:[
+
+{
+title:"Tocando com música",
+summary:"Aprenda a acompanhar uma canção.",
+content:"Observe partes repetidas e mudanças entre seções.",
+points:["Escute","Conte","Observe"],
+exercise:"Acompanhe primeiro apenas o pulso.",
+tip:"Conheça a música antes."
+},
+
+{
+title:"Preparando uma apresentação",
+summary:"Organize sua prática.",
+content:"Repita os trechos importantes e conheça as transições.",
+points:["Planejamento","Repetição","Calma"],
+exercise:"Liste os trechos mais difíceis.",
+tip:"Treine especialmente as transições."
+},
+
+{
+title:"Mantendo o tempo",
+summary:"Busque estabilidade.",
+content:"Mantenha uma referência constante durante a execução.",
+points:["Pulso","Calma","Controle"],
+exercise:"Pratique uma sequência longa.",
+tip:"Não acelere para compensar erros."
+},
+
+{
+title:"Erros comuns",
+summary:"Identifique problemas.",
+content:"Acelerar, perder a contagem e tocar com tensão são problemas comuns.",
+points:["Observe","Identifique","Corrija"],
+exercise:"Escolha um ponto para melhorar.",
+tip:"Corrija um problema por vez."
+},
+
+{
+title:"Plano de evolução",
+summary:"Organize seus estudos.",
+content:"Divida sua rotina entre técnica, ritmo, coordenação e repertório.",
+points:["Objetivos","Rotina","Avaliação"],
+exercise:"Monte uma rotina semanal.",
+tip:"Objetivos pequenos são mais fáceis de acompanhar."
+},
+
+{
+title:"Próximos passos",
+summary:"Continue sua evolução.",
+content:"Continue praticando os fundamentos e explorando novos estilos.",
+points:["Prática","Exploração","Objetivos"],
+exercise:"Defina um objetivo para as próximas semanas.",
+tip:"A evolução acontece gradualmente."
+}
+
+]
+}
+
+];
+
+
+/* ESTADO */
+
+let currentModule = 0;
+let currentLesson = 0;
+
+let completed = [];
+
+try{
+  completed = JSON.parse(
+    localStorage.getItem("bateriapro_progress") || "[]"
+  );
+}catch(error){
+  completed = [];
+}
+
+
+/* TOTAL */
+
+function getTotalLessons(){
+
+  let total = 0;
+
+  course.forEach(module => {
+    total += module.lessons.length;
+  });
+
+  return total;
+}
+
+
+function getLessonId(module,lesson){
+  return module + "-" + lesson;
+}
+
+
+/* MÓDULOS */
+
+function renderModules(){
+
+  const container =
+    document.getElementById("moduleList");
+
+  container.innerHTML = "";
+
+  course.forEach((module,index)=>{
+
+    const button =
+      document.createElement("button");
+
+    button.className =
+      "module-button " +
+      (index === currentModule ? "active" : "");
+
+    button.innerHTML = `
+      <strong>📘 Módulo ${String(index+1).padStart(2,"0")}</strong>
+      <small>${module.name}</small>
+    `;
+
+    button.onclick = function(){
+
+      currentModule = index;
+      currentLesson = 0;
+
+      render();
+
+    };
+
+    container.appendChild(button);
+
+  });
+
+}
+
+
+/* AULAS */
+
+function renderLessons(){
+
+  const container =
+    document.getElementById("lessonList");
+
+  container.innerHTML = "";
+
+  const lessons =
+    course[currentModule].lessons;
+
+  lessons.forEach((lesson,index)=>{
+
+    const lessonID =
+      getLessonId(currentModule,index);
+
+    const isDone =
+      completed.includes(lessonID);
+
+    const button =
+      document.createElement("button");
+
+    button.className =
+      "lesson-button " +
+      (index === currentLesson ? "active " : "") +
+      (isDone ? "done" : "");
+
+    button.innerHTML = `
+      ${isDone ? "✅" : "📖"}
+      <strong>
+        ${String(index+1).padStart(2,"0")}.
+        ${lesson.title}
+      </strong>
+
+      <small>
+        ${isDone ? "Concluída" : "Aula escrita"}
+      </small>
+    `;
+
+    button.onclick = function(){
+
+      currentLesson = index;
+
+      render();
+
+      window.scrollTo({
+        top:0,
+        behavior:"smooth"
+      });
+
+    };
+
+    container.appendChild(button);
+
+  });
+
+}
+
+
+/* AULA */
+
+function loadLesson(){
+
+  const lesson =
+    course[currentModule]
+    .lessons[currentLesson];
+
+  document
+    .getElementById("lessonTag")
+    .textContent =
+    "MÓDULO " +
+    String(currentModule+1).padStart(2,"0") +
+    " • AULA " +
+    String(currentLesson+1).padStart(2,"0");
+
+  document
+    .getElementById("lessonTitle")
+    .textContent =
+    lesson.title;
+
+  document
+    .getElementById("lessonSummary")
+    .textContent =
+    lesson.summary;
+
+  document
+    .getElementById("lessonContent")
+    .textContent =
+    lesson.content;
+
+  document
+    .getElementById("lessonExercise")
+    .textContent =
+    lesson.exercise;
+
+  document
+    .getElementById("lessonTip")
+    .textContent =
+    lesson.tip;
+
+  const points =
+    document.getElementById("lessonPoints");
+
+  points.innerHTML = "";
+
+  lesson.points.forEach(point => {
+
+    const item =
+      document.createElement("li");
+
+    item.textContent = point;
+
+    points.appendChild(item);
+
+  });
+
+}
+
+
+/* PROGRESSO */
+
+function updateProgress(){
+
+  const total =
+    getTotalLessons();
+
+  const done =
+    completed.length;
+
+  const percent =
+    Math.round((done / total) * 100);
+
+  document
+    .getElementById("progressPercent")
+    .textContent =
+    percent + "%";
+
+  document
+    .getElementById("progressFill")
+    .style.width =
+    percent + "%";
+
+  document
+    .getElementById("counter")
+    .textContent =
+    done +
+    " de " +
+    total +
+    " aulas concluídas";
+
+  document
+    .getElementById("completedNumber")
+    .textContent =
+    done;
+
+  document
+    .getElementById("remainingNumber")
+    .textContent =
+    total - done;
+
+}
+
+
+/* CONCLUIR */
+
+function completeLesson(){
+
+  const id =
+    getLessonId(
+      currentModule,
+      currentLesson
+    );
+
+  if(!completed.includes(id)){
+
+    completed.push(id);
+
+    localStorage.setItem(
+      "bateriapro_progress",
+      JSON.stringify(completed)
+    );
+
+  }
+
+  render();
+
+}
+
+
+/* PRÓXIMA */
+
+function nextLesson(){
+
+  const lessons =
+    course[currentModule].lessons;
+
+  if(
+    currentLesson <
+    lessons.length - 1
+  ){
+
+    currentLesson++;
+
+  }else if(
+    currentModule <
+    course.length - 1
+  ){
+
+    currentModule++;
+    currentLesson = 0;
+
+  }
+
+  render();
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+}
+
+
+/* ANTERIOR */
+
+function previousLesson(){
+
+  if(currentLesson > 0){
+
+    currentLesson--;
+
+  }else if(currentModule > 0){
+
+    currentModule--;
+
+    currentLesson =
+      course[currentModule]
+      .lessons.length - 1;
+
+  }
+
+  render();
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+}
+
+
+/* RENDERIZAR */
+
+function render(){
+
+  document
+    .getElementById("moduleTitle")
+    .textContent =
+    "Módulo " +
+    String(currentModule+1).padStart(2,"0") +
+    " — " +
+    course[currentModule].name;
+
+  document
+    .getElementById("lessonListTitle")
+    .textContent =
+    "📚 " +
+    course[currentModule].name;
+
+  renderModules();
+
+  renderLessons();
+
+  loadLesson();
+
+  updateProgress();
+
+}
+
+
+/* INICIAR */
+
+render();
+
+</script>
+
+</body>
+</html>
