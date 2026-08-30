@@ -9,23 +9,21 @@
 <style>
 :root{
   --red:#e63946;
-  --bg:#080808;
+  --red2:#ff5260;
+  --bg:#090909;
   --sidebar:#101010;
   --card:#151515;
-  --card2:#1b1b1b;
-  --border:#292929;
+  --card2:#1c1c1c;
+  --border:#2b2b2b;
   --text:#ffffff;
-  --muted:#929292;
+  --muted:#a0a0a0;
+  --green:#22c55e;
 }
 
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
 }
 
 body{
@@ -38,59 +36,25 @@ button{
   font:inherit;
 }
 
+/* APP */
+
 .app{
-  display:flex;
   min-height:100vh;
 }
 
-/* =========================
-SIDEBAR
-========================= */
+/* SIDEBAR */
 
 .sidebar{
-  width:290px;
-  background:var(--sidebar);
-  border-right:1px solid var(--border);
   position:fixed;
+  width:300px;
+  height:100vh;
   left:0;
   top:0;
-  height:100vh;
-  padding:22px;
   overflow-y:auto;
-  z-index:10;
+  background:var(--sidebar);
+  border-right:1px solid var(--border);
+  padding:22px;
 }
 
 .logo{
-  font-size:27px;
-  font-weight:900;
-  margin-bottom:30px;
-}
-
-.logo span{
-  color:var(--red);
-}
-
-.student-box{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:16px;
-  margin-bottom:20px;
-}
-
-.student-box small{
-  display:block;
-  color:var(--muted);
-  margin-top:6px;
-}
-
-.progress-label{
-  display:flex;
-  justify-content:space-between;
-  color:#aaa;
-  font-size:13px;
-  margin-bottom:8px;
-}
-
-.progress{
-  width
+  font-size:28
