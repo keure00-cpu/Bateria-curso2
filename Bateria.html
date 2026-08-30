@@ -4,21 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BateriaPro | Curso Online de Bateria</title>
-
-<meta name="description" content="Aprenda bateria do zero com o BateriaPro. Videoaulas, exercícios e módulos para desenvolver ritmo, coordenação e técnica.">
+<title>BateriaPro | Área de Aulas</title>
 
 <style>
 :root{
   --red:#e63946;
-  --red-dark:#b51f2d;
-  --bg:#08090b;
-  --bg2:#0e1014;
-  --card:#14171d;
-  --border:#292d36;
+  --bg:#080808;
+  --sidebar:#101010;
+  --card:#151515;
+  --card2:#1b1b1b;
+  --border:#292929;
   --text:#ffffff;
-  --muted:#a5a9b3;
-  --green:#20c997;
+  --muted:#929292;
 }
 
 *{
@@ -35,31 +32,65 @@ body{
   font-family:Arial,Helvetica,sans-serif;
   background:var(--bg);
   color:var(--text);
-  line-height:1.6;
 }
 
-a{
-  text-decoration:none;
+button{
+  font:inherit;
 }
 
-.container{
-  width:min(1120px,92%);
-  margin:auto;
-}
-
-/* HEADER */
-
-header{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(8,9,11,.94);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--border);
-}
-
-.nav{
-  height:72px;
+.app{
   display:flex;
-  align-items:center;
-  justify
+  min-height:100vh;
+}
+
+/* =========================
+SIDEBAR
+========================= */
+
+.sidebar{
+  width:290px;
+  background:var(--sidebar);
+  border-right:1px solid var(--border);
+  position:fixed;
+  left:0;
+  top:0;
+  height:100vh;
+  padding:22px;
+  overflow-y:auto;
+  z-index:10;
+}
+
+.logo{
+  font-size:27px;
+  font-weight:900;
+  margin-bottom:30px;
+}
+
+.logo span{
+  color:var(--red);
+}
+
+.student-box{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:16px;
+  margin-bottom:20px;
+}
+
+.student-box small{
+  display:block;
+  color:var(--muted);
+  margin-top:6px;
+}
+
+.progress-label{
+  display:flex;
+  justify-content:space-between;
+  color:#aaa;
+  font-size:13px;
+  margin-bottom:8px;
+}
+
+.progress{
+  width
