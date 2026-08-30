@@ -4,29 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BateriaPro | Área do Aluno</title>
+<title>BateriaPro | Área de Aulas</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
 :root{
   --red:#e63946;
   --bg:#080808;
-  --panel:#111;
-  --panel2:#171717;
+  --sidebar:#101010;
+  --card:#151515;
+  --card2:#1b1b1b;
   --border:#292929;
   --text:#ffffff;
-  --muted:#888;
+  --muted:#929292;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,Segoe UI,sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
   background:var(--bg);
   color:var(--text);
+}
+
+button{
+  font:inherit;
 }
 
 .app{
@@ -34,439 +43,54 @@ body{
   min-height:100vh;
 }
 
-/* MENU */
+/* =========================
+SIDEBAR
+========================= */
 
 .sidebar{
   width:290px;
-  background:#0d0d0d;
+  background:var(--sidebar);
   border-right:1px solid var(--border);
-  padding:20px;
   position:fixed;
-  height:100vh;
-  overflow-y:auto;
   left:0;
   top:0;
+  height:100vh;
+  padding:22px;
+  overflow-y:auto;
+  z-index:10;
 }
 
 .logo{
-  font-size:28px;
+  font-size:27px;
   font-weight:900;
-  margin-bottom:25px;
+  margin-bottom:30px;
 }
 
 .logo span{
   color:var(--red);
 }
 
-.student{
-  background:var(--panel);
+.student-box{
+  background:var(--card);
   border:1px solid var(--border);
-  padding:15px;
-  border-radius:12px;
+  border-radius:14px;
+  padding:16px;
   margin-bottom:20px;
 }
 
-.student small{
+.student-box small{
   display:block;
   color:var(--muted);
-  margin-top:5px;
+  margin-top:6px;
 }
 
-.progress-box{
-  margin-bottom:25px;
-}
-
-.progress-info{
+.progress-label{
   display:flex;
   justify-content:space-between;
-  font-size:13px;
   color:#aaa;
+  font-size:13px;
   margin-bottom:8px;
 }
 
 .progress{
-  height:9px;
-  background:#252525;
-  border-radius:20px;
-  overflow:hidden;
-}
-
-.progress-fill{
-  height:100%;
-  width:0%;
-  background:var(--red);
-  transition:.3s;
-}
-
-.module{
-  width:100%;
-  background:var(--panel);
-  border:1px solid var(--border);
-  color:#ddd;
-  padding:13px;
-  border-radius:10px;
-  margin-bottom:8px;
-  cursor:pointer;
-  text-align:left;
-  transition:.2s;
-}
-
-.module:hover,
-.module.active{
-  border-color:var(--red);
-  background:#1d1012;
-}
-
-.module b{
-  display:block;
-  font-size:13px;
-}
-
-.module span{
-  color:#777;
-  font-size:11px;
-}
-
-/* MAIN */
-
-main{
-  margin-left:290px;
-  width:calc(100% - 290px);
-  padding:35px;
-  max-width:1400px;
-}
-
-.top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:25px;
-  gap:20px;
-}
-
-.badge{
-  display:inline-block;
-  color:var(--red);
-  background:#240d10;
-  border:1px solid #542126;
-  padding:7px 13px;
-  border-radius:30px;
-  font-size:12px;
-  font-weight:bold;
-}
-
-.plan{
-  background:var(--panel);
-  border:1px solid var(--border);
-  padding:10px 15px;
-  border-radius:10px;
-  color:#aaa;
-  font-size:13px;
-}
-
-/* PLAYER */
-
-.player-box{
-  background:var(--panel);
-  border:1px solid var(--border);
-  border-radius:18px;
-  overflow:hidden;
-}
-
-.video-container{
-  width:100%;
-  aspect-ratio:16/9;
-  background:#000;
-}
-
-.video-container iframe{
-  width:100%;
-  height:100%;
-  border:0;
-}
-
-.lesson-header{
-  padding:25px;
-}
-
-.lesson-header h1{
-  font-size:28px;
-  margin-bottom:10px;
-}
-
-.lesson-header p{
-  color:var(--muted);
-  line-height:1.6;
-}
-
-.actions{
-  margin-top:20px;
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
-
-.btn{
-  border:0;
-  background:var(--red);
-  color:white;
-  font-weight:bold;
-  padding:13px 18px;
-  border-radius:9px;
-  cursor:pointer;
-}
-
-.btn:hover{
-  filter:brightness(1.1);
-}
-
-.btn.secondary{
-  background:#252525;
-}
-
-/* CONTEÚDO */
-
-.content{
-  display:grid;
-  grid-template-columns:1fr 350px;
-  gap:22px;
-  margin-top:25px;
-}
-
-.card{
-  background:var(--panel);
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:22px;
-}
-
-.card h2{
-  font-size:19px;
-  margin-bottom:18px;
-}
-
-.lesson{
-  width:100%;
-  display:flex;
-  align-items:center;
-  gap:13px;
-  background:var(--panel2);
-  color:#fff;
-  border:1px solid var(--border);
-  padding:13px;
-  border-radius:10px;
-  margin-bottom:8px;
-  cursor:pointer;
-  text-align:left;
-  transition:.2s;
-}
-
-.lesson:hover,
-.lesson.active{
-  border-color:var(--red);
-  background:#1d1012;
-}
-
-.lesson.done .circle{
-  background:var(--red);
-  border-color:var(--red);
-}
-
-.circle{
-  width:23px;
-  height:23px;
-  border:2px solid #555;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:12px;
-  flex-shrink:0;
-}
-
-.lesson strong{
-  display:block;
-  font-size:14px;
-}
-
-.lesson small{
-  color:#777;
-  margin-top:4px;
-  display:block;
-}
-
-.info{
-  color:#888;
-  line-height:1.7;
-}
-
-.stats{
-  margin-top:20px;
-  padding:15px;
-  border-radius:10px;
-  background:#1b1012;
-  color:#ddd;
-}
-
-/* RESPONSIVO */
-
-@media(max-width:900px){
-
-  .app{
-    display:block;
-  }
-
-  .sidebar{
-    position:relative;
-    width:100%;
-    height:auto;
-  }
-
-  main{
-    margin-left:0;
-    width:100%;
-    padding:20px;
-  }
-
-  .content{
-    grid-template-columns:1fr;
-  }
-
-  .modules-list{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:8px;
-  }
-
-}
-
-@media(max-width:500px){
-
-  .modules-list{
-    grid-template-columns:1fr;
-  }
-
-  .top{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .lesson-header h1{
-    font-size:22px;
-  }
-
-}
-</style>
-</head>
-
-<body>
-
-<div class="app">
-
-<!-- MENU LATERAL -->
-
-<aside class="sidebar">
-
-<div class="logo">
-Bateria<span>Pro</span>
-</div>
-
-<div class="student">
-
-<strong>🎓 Área do Aluno</strong>
-
-<small>
-Curso Completo de Bateria
-</small>
-
-</div>
-
-<div class="progress-box">
-
-<div class="progress-info">
-
-<span>Seu progresso</span>
-
-<span id="progressText">
-0%
-</span>
-
-</div>
-
-<div class="progress">
-
-<div
-class="progress-fill"
-id="progressFill">
-</div>
-
-</div>
-
-</div>
-
-<div
-class="modules-list"
-id="modules">
-</div>
-
-</aside>
-
-
-<!-- ÁREA PRINCIPAL -->
-
-<main>
-
-<div class="top">
-
-<span class="badge">
-🥁 CURSO DE BATERIA
-</span>
-
-<div class="plan">
-🎓 Área do Aluno
-</div>
-
-</div>
-
-
-<!-- PLAYER -->
-
-<section class="player-box">
-
-<div class="video-container">
-
-<iframe
-id="videoPlayer"
-src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-allowfullscreen>
-</iframe>
-
-</div>
-
-<div class="lesson-header">
-
-<h1 id="lessonTitle">
-Bem-vindo ao BateriaPro
-</h1>
-
-<p id="lessonDescription">
-
-Aprenda bateria passo a passo, desde os fundamentos até sua primeira performance.
-
-</p>
-
-<div class="actions">
-
-<button
-class="btn"
-onclick="completeCurrentLesson()">
-
-✓ Marcar como concluída
-
-</button>
-
-<button
-class="btn secondary"
-onclick="nextLesson()">
-
-Próxima aula →
+  width
