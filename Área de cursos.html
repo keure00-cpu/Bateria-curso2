@@ -9,13 +9,13 @@
 <style>
 :root{
   --red:#e63946;
-  --bg:#090909;
+  --dark:#080808;
   --sidebar:#101010;
   --card:#151515;
   --card2:#1d1d1d;
-  --border:#2c2c2c;
+  --border:#303030;
   --text:#fff;
-  --muted:#999;
+  --muted:#a0a0a0;
   --green:#22c55e;
 }
 
@@ -25,20 +25,24 @@
   padding:0;
 }
 
+html{scroll-behavior:smooth}
+
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:var(--bg);
+  background:var(--dark);
   color:var(--text);
 }
 
-.app{
-  min-height:100vh;
+button{
+  font-family:inherit;
 }
+
+/* SIDEBAR */
 
 .sidebar{
   position:fixed;
-  left:0;
   top:0;
+  left:0;
   width:300px;
   height:100vh;
   overflow-y:auto;
@@ -50,18 +54,16 @@ body{
 .logo{
   font-size:30px;
   font-weight:900;
-  margin-bottom:28px;
+  margin-bottom:25px;
 }
 
-.logo span{
-  color:var(--red);
-}
+.logo span{color:var(--red)}
 
 .course-box{
-  padding:16px;
+  padding:17px;
   border-radius:15px;
-  background:#1c1012;
-  border:1px solid #482126;
+  background:linear-gradient(135deg,#251214,#151515);
+  border:1px solid #51252a;
   margin-bottom:20px;
 }
 
@@ -70,110 +72,3 @@ body{
   font-size:13px;
   margin-top:6px;
 }
-
-.progress-head{
-  display:flex;
-  justify-content:space-between;
-  font-size:13px;
-  margin-bottom:8px;
-}
-
-.progress-head span{
-  color:var(--muted);
-}
-
-.progress-head strong{
-  color:var(--red);
-}
-
-.progress{
-  height:9px;
-  background:#292929;
-  border-radius:20px;
-  overflow:hidden;
-  margin-bottom:25px;
-}
-
-.progress-fill{
-  width:0%;
-  height:100%;
-  background:var(--red);
-  transition:.3s;
-}
-
-.module-title{
-  color:#777;
-  font-size:12px;
-  text-transform:uppercase;
-  margin-bottom:10px;
-}
-
-.module-list{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-}
-
-.module-btn{
-  background:var(--card);
-  border:1px solid var(--border);
-  color:white;
-  padding:13px;
-  border-radius:12px;
-  cursor:pointer;
-  text-align:left;
-}
-
-.module-btn.active{
-  border-color:var(--red);
-  background:#241214;
-}
-
-.module-btn strong{
-  display:block;
-  font-size:13px;
-}
-
-.module-btn small{
-  display:block;
-  color:#888;
-  margin-top:4px;
-}
-
-.main{
-  margin-left:300px;
-  padding:35px;
-  max-width:1500px;
-}
-
-.header{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  align-items:center;
-  margin-bottom:25px;
-}
-
-.header small{
-  color:var(--red);
-  font-weight:bold;
-}
-
-.header h1{
-  margin-top:5px;
-  font-size:26px;
-}
-
-.counter{
-  padding:11px 15px;
-  border:1px solid var(--border);
-  background:var(--card);
-  border-radius:10px;
-  color:var(--muted);
-  font-size:13px;
-}
-
-/* PLAYER */
-
-.player-card{
-  background:var(--card);
